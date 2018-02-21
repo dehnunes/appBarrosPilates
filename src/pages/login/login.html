@@ -1,6 +1,6 @@
 <ion-content padding id="login" class="backgroundLogin">
-  <!--<img src="assets/imgs/logo.png" class="logo"/>
-  <ion-grid>
+  <img src="assets/imgs/barrospilates.png"/>
+<!--  <ion-grid>
     <ion-row>
       <ion-col>
         <h1>Login</h1>
@@ -11,12 +11,32 @@
   <ion-grid >
     <ion-row>
       <ion-col center text-center>
-        <button ion-button (click)="signup()">Registrar</button>
+        <button ion-button round (click)="signup()" color="laranjaBp">Registrar</button>
+      </ion-col>
+      <ion-col center text-center>
+        <button ion-button round (click)="login()" color="laranjaBp">Entrar</button>
       </ion-col>
     </ion-row>
     <ion-row>
+      <div *ngIf="isLoggedIn; else facebookLogin">
+        <h2>Hi, {{users.name}} ({{users.email}})</h2>
+        <p>
+          Gender: {{users.gender}}
+        </p>
+        <p>
+          <img src="{{users.picture.data.url}}" width="100" alt="{{users.name}}" />
+        </p>
+        <p>
+          <button ion-button icon-right round (click) ="logout()">
+            Logout
+          </button>
+        </p>
+      </div>
       <ion-col center text-center>
-        <button ion-button (click)="login()" menuToggle>Log in</button>
+      <button ion-button icon-right round (click)="loginFace()">
+        Entre com
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
       </ion-col>
     </ion-row>
   </ion-grid>
