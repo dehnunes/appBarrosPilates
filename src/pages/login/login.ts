@@ -3,8 +3,6 @@
   import { PerfilPage } from '../perfil/perfil';
   import { Facebook } from '@ionic-native/facebook';
   import { ModalController } from 'ionic-angular';
-  import { ModalcadastrousuarioPage } from '../modalcadastrousuario/modalcadastrousuario';
-
   /**
    * Generated class for the LoginPage page.
    *
@@ -73,7 +71,7 @@
       });
   }
 
-  openModal(){
+  openModalRegistro(){
     var modalPage = this.modalCtrl.create('ModalcadastrousuarioPage');
     modalPage.present();
   }

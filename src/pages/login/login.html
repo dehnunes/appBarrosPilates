@@ -1,31 +1,35 @@
-<ion-content padding id="login" class="backgroundLogin">
-  <br />
-  <br />
-  <img src="assets/imgs/barrospilates.png"/>
-  <br />
-  <br />
-  <ion-grid>
+    <ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + '../assets/imgs/backedit1.jpg' +')'}">
+    <div padding>
     <ion-row>
-      <ion-item>
-        <ion-label color="laranjaBp" stacked>Email ou CPF</ion-label>
-        <ion-input type="email"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label color="laranjaBp" stacked >Senha</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-    </ion-row>
-    <br />
-    <br />
-    <ion-row>
-      <ion-col center text-center>
-        <button ion-button round (click)="login()" color="laranjaBp">Entrar</button>
-      </ion-col>
-      <ion-col center text-center>
-        <button ion-button round (click)="openModal()" color="laranjaBp">Registrar</button>
+      <ion-col>
+        <img class="logo" src="assets/imgs/barrospilateslogo.png" />
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list inset class="no-border">
+          <ion-item>
+            <ion-label>Usuario</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Senha</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="login-button" (click)="openModalRegistro()">Registrar</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+      <button ion-button class="login-button" (click)="login()">Entrar</button>
+    </ion-col>
+    </ion-row>
+    <ion-col>
     <ion-row>
       <div *ngIf="isLoggedIn; else facebookLogin">
         <h2>Hi, {{users.name}} ({{users.email}})</h2>
@@ -42,12 +46,12 @@
         </p>
       </div>
       <ion-col center text-center>
-        <button ion-button icon-right round (click)="loginFace()">
+        <button ion-button class="login-facebook" icon-right (click)="loginFace()">
           Entre com
           <ion-icon name="logo-facebook"></ion-icon>
         </button>
       </ion-col>
     </ion-row>
-
-  </ion-grid>
-</ion-content>
+    </ion-col>
+    </div>
+    </ion-content>
