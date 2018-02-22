@@ -1,7 +1,9 @@
   import { Component } from '@angular/core';
   import { IonicPage, NavController, NavParams } from 'ionic-angular';
-  import { HomePage } from '../home/home';
+  import { PerfilPage } from '../perfil/perfil';
   import { Facebook } from '@ionic-native/facebook';
+  import { ModalController } from 'ionic-angular';
+  import { ModalcadastrousuarioPage } from '../modalcadastrousuario/modalcadastrousuario';
 
   /**
    * Generated class for the LoginPage page.
@@ -22,13 +24,13 @@
     }
 
     login(){
-      this.navCtrl.push(HomePage, {}, {animate: false});
+      this.navCtrl.push(PerfilPage, {}, {animate: false});
     }
 
     isLoggedIn:boolean = false;
     users: any;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook,public modalCtrl : ModalController) {
     fb.getLoginStatus()
       .then(res => {
         console.log(res.status);
@@ -69,6 +71,11 @@
       .catch(e => {
         console.log(e);
       });
+  }
+
+  openModal(){
+    var modalPage = this.modalCtrl.create('ModalcadastrousuarioPage');
+    modalPage.present();
   }
 
 

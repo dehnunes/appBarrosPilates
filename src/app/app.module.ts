@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,7 +12,6 @@ import { Facebook } from '@ionic-native/facebook';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     PerfilPage,
     LoginPage
   ],
@@ -24,8 +22,8 @@ import { Facebook } from '@ionic-native/facebook';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    LoginPage
+    LoginPage,
+    PerfilPage
   ],
   providers: [
     StatusBar,
