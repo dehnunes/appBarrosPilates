@@ -1,6 +1,6 @@
 <ion-menu [content]="content" id="menu-material" persistent="true">
   <ion-content>
-    <div class="menu-header">
+    <div class="menu-header"  [ngStyle]="{'background-image': 'url(' + 'https://besthqwallpapers.com/Uploads/22-12-2017/34521/thumb2-squares-4k-orange-background-square-texture-geometry.jpg' +')'}">
       <!--material-design-background-->
       <img class="user-avatar round" [src]="chosenPicture || placeholder" onerror="this.src='assets/imgs/girl-avatar.png'"
       />

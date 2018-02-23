@@ -7,7 +7,7 @@
           <ion-title>Perfil</ion-title>
       </ion-navbar>
   </ion-header>
-  <div id="profile-bg"></div>
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + 'https://besthqwallpapers.com/Uploads/22-12-2017/34521/thumb2-squares-4k-orange-background-square-texture-geometry.jpg' +')'}"></div>
   <div id="content">
     <div id="profile-info" padding>
       <img id="profile-image" src="assets/imgs/girl-avatar.png">
@@ -33,7 +33,7 @@
        <ion-item>
          <ion-label>Objetivo:</ion-label>
            <ion-select stacked [(ngModel)]="obj">
-             <ion-option value="e">Emagracer</ion-option>
+             <ion-option value="e">Emagrecer</ion-option>
              <ion-option value="o">Outros</ion-option>
             </ion-select>
        </ion-item>
@@ -42,7 +42,7 @@
       <ion-list>
        <ion-item>
           <ion-label>Idade:</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="number"></ion-input>
        </ion-item>
       </ion-list>
 
@@ -50,14 +50,14 @@
       <ion-list>
        <ion-item>
          <ion-label>Altura:</ion-label>
-         <ion-input type="text"></ion-input>
+         <ion-input type="number"></ion-input>
        </ion-item>
       </ion-list>
 
       <ion-list>
        <ion-item>
          <ion-label>Peso:</ion-label>
-         <ion-input type="text"></ion-input>
+         <ion-input type="number"></ion-input>
        </ion-item>
       </ion-list>
 
