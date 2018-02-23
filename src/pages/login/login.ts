@@ -1,8 +1,9 @@
   import { Component } from '@angular/core';
   import { IonicPage, NavController, NavParams } from 'ionic-angular';
-  import { PerfilPage } from '../perfil/perfil';
+  import { HomePage } from '../home/home';
   import { Facebook } from '@ionic-native/facebook';
   import { ModalController } from 'ionic-angular';
+  import { MenuController } from 'ionic-angular';
   /**
    * Generated class for the LoginPage page.
    *
@@ -22,13 +23,21 @@
     }
 
     login(){
-      this.navCtrl.push(PerfilPage, {}, {animate: false});
+      this.navCtrl.push(HomePage);
     }
 
     isLoggedIn:boolean = false;
     users: any;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook,public modalCtrl : ModalController) {
+    constructor(public navCtrl: NavController,
+                public navParams: NavParams,
+                private fb: Facebook,
+                public modalCtrl : ModalController,
+                public menuCtrl: MenuController) {
+
+    //desabilitar slidemenu
+    this.menuCtrl.enable(true, 'menu-material');
+
     fb.getLoginStatus()
       .then(res => {
         console.log(res.status);

@@ -1,0 +1,44 @@
+page-aulas {
+
+  ion-content {
+    background: linear-gradient(0deg, #eeeef1 0%, white 80%, white 100%);
+  }
+  button,
+  ion-button,
+  .button-md,
+  .button-ios {
+    text-transform: none !important;
+  }
+  p {
+    color: #FFFF;
+  }
+  // Cover image
+  #profile-bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: -16px;
+    height: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+  }
+  // Profile content
+  #content {
+    position: relative;
+    margin-top: 150px;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  #aulas-info {
+    position: absolute;
+    top: -110px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    font-size: 15px;
+  }
+
+}
